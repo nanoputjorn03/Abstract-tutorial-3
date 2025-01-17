@@ -8,7 +8,7 @@ public class StudentStack {
     public StudentStack(int capacity) {
         this.capacity = capacity;
         this.stack = new Student[capacity];
-        this.top = -1; // empty stack
+        this.top = -1; 
     }
 
     public void push(Student s) {
@@ -17,7 +17,6 @@ public class StudentStack {
         } else {
             top++;
             stack[top] = s;
-            // For output style: "Element 100 Joe 2.5 is pushed into the queue"
             System.out.println("Element " + s + " is pushed into the queue");
         }
     }
@@ -28,9 +27,8 @@ public class StudentStack {
             return null;
         } else {
             Student popped = stack[top];
-            stack[top] = null; // optional
+            stack[top] = null;
             top--;
-            // For output style: "Popped 110 Hank 4.0"
             System.out.println("Popped " + popped);
             return popped;
         }
